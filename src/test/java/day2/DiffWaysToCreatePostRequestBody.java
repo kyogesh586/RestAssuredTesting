@@ -36,7 +36,7 @@ public class DiffWaysToCreatePostRequestBody {
 		data.put("depositpaid", true);
 		
 		HashMap<String, String> bookingDates = new HashMap<String, String>();
-		bookingDates.put("checkin", "2018-01-01");
+		bookingDates.put("checkin", "2018-01-02");
 		bookingDates.put("checkout", "2019-01-01");
 		data.put("bookingdates", bookingDates);
 		data.put("additionalneeds", "Breakfast");
@@ -52,7 +52,7 @@ public class DiffWaysToCreatePostRequestBody {
 			.body("booking.firstname", equalTo("Scott"))
 		    .body("booking.lastname", equalTo("Brown")) 
 		    .body("booking.totalprice", equalTo(1111)) 
-		    .body("booking.bookingdates.checkin", equalTo("2018-01-01"))
+		    .body("booking.bookingdates.checkin", equalTo("2018-01-02"))
 		    .header("Content-Type", "application/json; charset=utf-8") 
 		    .log().all();
 		 
